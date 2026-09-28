@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 class SendWelcomeEmailJob implements ShouldQueue
 {
     use Queueable, SerializesModels;
+    public $tries = 3; //si falla, reintenta hasta 3 veces y luego pasa a failed_jobs
 
     public User $user; //QUE VA A RECORDAR EL JOB
 
