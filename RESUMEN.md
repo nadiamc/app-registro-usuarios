@@ -5,7 +5,7 @@
 
 ---
 
-## 1) Levantar el proyecto (TODO, en orden)
+## 1) Levantar el proyecto
 
 Abrí **dos terminales** dentro de `C:\xampp\htdocs\app-registro-usuarios`:
 
@@ -20,9 +20,9 @@ php artisan serve
 ```bash
 php artisan queue:work
 ```
-> ⚠️ Si no corre, los correos se quedan guardados en la tabla `jobs` sin enviarse.
+> Si no corre, los correos se quedan guardados en la tabla `jobs` sin enviarse.
 
-> 💡 Al tocar el `.env` conviene: `php artisan config:clear`
+>  Al tocar el `.env` conviene: `php artisan config:clear`
 
 ---
 
@@ -39,7 +39,7 @@ php artisan queue:work
 
 ---
 
-## 3) Cómo funciona el flujo (así se lo explico al profe)
+## 3) Cómo funciona el flujo
 
 1. El usuario llena el formulario y lo manda.
 2. El controlador **valida** los datos y guarda al usuario (contraseña con `Hash::make`).
